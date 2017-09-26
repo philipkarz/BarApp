@@ -11,6 +11,13 @@
 <p>Reservations: <%= @bar.reservations %></p>
 <p>Games: <%= @bar.games %></p>
 
+<% @reviews.each do |r| %>
+    <h2><%= r.title %></h2> 
+    <p><%= r.body %></p>
+    <p><%= r.user.name %></p>
+<% end %>
+<%= link_to  "Create Review", new_review_path %><br />
+<%= link_to  "Bars near you", bars_path %>
 
 
 

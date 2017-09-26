@@ -1,2 +1,11 @@
-<h1>Users#show</h1>
+<h1>Users# <%= @user.name %></h1>
 <p>Find me in app/views/users/show.html.erb</p>
+
+<h1>check out these bars</h1>
+<h1>Bars</h1>
+<ul>
+<% @bars.each do |b| %>
+<li><%= link_to b.name, bar_path(b) %></li>  
+<% end %>
+<%= link_to  "Create Bar", new_bar_path %>
+</ul>

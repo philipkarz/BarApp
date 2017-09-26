@@ -1,9 +1,10 @@
 <h1>Bars</h1>
 <ul>
 <% @bars.each do |b| %>
-<li><%= link_to b.name, new_bar_path %></li>  
+<li><%= link_to b.name, bar_path(b) %></li>  
 <% end %>
-
+<br />
+<%= link_to  "Create Bar", new_bar_path %>
 </ul>
 
 

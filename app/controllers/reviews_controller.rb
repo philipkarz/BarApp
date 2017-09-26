@@ -7,6 +7,7 @@ class ReviewsController < ApplicationController
 
   def new
     @review = Review.new
+  
   end
 
   def create
@@ -14,9 +15,8 @@ class ReviewsController < ApplicationController
     @review.title = params[:review][:title]
     @review.body = params[:review][:body]
     @review.rating = params[:review][:rating]
-    @bar = Bar.find params[:review][:bar_id]
-    @user = User.find params[:review][:user_id]
-    @review.bar = @bar
+    @review.user = User.find session[:user_id]
+    @review.bar = Bar.find(session[:bar_id])
     if @review.save
         redirect_to root_path
     else
