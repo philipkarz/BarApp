@@ -1,2 +1,18 @@
 <h1>Bars#new</h1>
-<p>Find me in app/views/bars/new.html.erb</p>
+<h1>Review a Bar</h1>
+
+<%= form_for @new_bar do |b| %>
+    <%= b.text_field :name, placeholder: 'Name' %> <br />
+    <%= b.text_field :address, placeholder: 'Address' %> <br />
+    <%= b.text_field :number, placeholder: 'Number' %> <br />
+    <%= b.text_field :hours, placeholder: 'Hours' %> <br />
+    <%= b.text_field :photos, placeholder: 'Photos' %> <br />
+    <%= b.text_field :website, placeholder: 'Website' %> <br />
+    <%= b.text_field :wifi, placeholder: 'Wifi?' %> <br />
+    <%= b.text_field :games, placeholder: 'Games?' %> <br />
+    <%= b.text_field :happyhour, placeholder: 'Happyhour' %> <br />
+    <%= b.text_field :reservations, placeholder: 'Reservations?' %> <br />
+    <%= b.submit %>
+<% end %>
+
+

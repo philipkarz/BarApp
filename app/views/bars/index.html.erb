@@ -1,2 +1,9 @@
-<h1>Bars#index</h1>
-<p>Find me in app/views/bars/index.html.erb</p>
+<h1>Bars</h1>
+<ul>
+<% @bars.each do |b| %>
+<li><%= link_to b.name, new_bar_path %></li>  
+<% end %>
+
+</ul>
+
+
