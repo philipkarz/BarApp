@@ -1,7 +1,7 @@
 <h1>Reviews#new</h1>
 <%= form_for @review do |f|%>
 <%=f.text_field :title, placeholder: 'Topic'%><br />
-<%=f.text_area :body, placeholder: 'Comment'%><br />
+<%=f.text_area :body, placeholder: 'Review'%><br />
 <%=f.number_field :rating, placeholder: 'Rating'%><br />
 
 <%= f.submit %><br />

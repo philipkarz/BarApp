@@ -1,23 +1,28 @@
 <h1>Bars#show</h1>
 
+<%= link_to  "Create Review", new_review_path %><br />
+<%= link_to  "Bars near you", bars_path %><br />
+
 <h1><%= @bar.name %></h1>
 <h2><%= @bar.address %></h2>
 <h2><%= @bar.number %></h2>
-<h2><%= @bar.hours %></h2>
-<h2><%= @bar.happyhour %></h2>
+<h3>Hours: <%= @bar.hours %></h3>
+<p><%= @bar.happyhour %></p>
 <h2><%= @bar.photos %></h2>
-<h2><%= @bar.website %></h2>
+<p><%= @bar.website %></p>
 <p>Wifi: <%= @bar.wifi %></p>
 <p>Reservations: <%= @bar.reservations %></p>
 <p>Games: <%= @bar.games %></p>
 
+<h1> Customer Reviews </h1>
 <% @reviews.each do |r| %>
-    <h2><%= r.title %></h2> 
+    <h2><%= link_to "Comment", review_path(r.id) %></h2> 
+    <h2><%= r.title %>
     <p><%= r.body %></p>
     <p><%= r.user.name %></p>
+    
 <% end %>
-<%= link_to  "Create Review", new_review_path %><br />
-<%= link_to  "Bars near you", bars_path %>
+
 
 
 

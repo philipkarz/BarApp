@@ -1,2 +1,16 @@
-<h1>Reviews#show</h1>
-<p>Find me in app/views/reviews/show.html.erb</p>
+<h1><%= @review.title %></h1>
+<h2><%= @review.body %></h2>
+<h3><%= @review.user.name %></h3>
+
+<%= link_to "Add Comment", new_review_comment_path %>
+
+<ul>
+   
+    <% @review.comments.each do |c| %>
+        <li>
+            <%= c.body %>
+            by: <%= c.user.name %>
+        </li>
+
+    <% end %>
+</ul>

@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>FoodApp</title>
+    <title>AuthRails</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   </head>
 
   <body>
+   <%= render 'layouts/partials/navbar' %>
+<!-- message that alert if email and password dont match -->
+
+  <div class="container">
     <%= yield %>
+  </div>
   </body>
 </html>

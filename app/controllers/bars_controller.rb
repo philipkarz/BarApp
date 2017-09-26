@@ -7,6 +7,7 @@ class BarsController < ApplicationController
     @bar = Bar.find(params[:id])
     session[:bar_id] = @bar.id
     @reviews = @bar.reviews.all
+    # @comments = @reviews.comments.all
   end
 
   def new
@@ -14,7 +15,7 @@ class BarsController < ApplicationController
   end
   
   def create
-  @bar = Bar.new
+    @bar = Bar.new
     @bar.name = params[:bar][:name]
     @bar.address = params[:bar][:address]
     @bar.number = params[:bar][:number]
@@ -25,25 +26,21 @@ class BarsController < ApplicationController
     @bar.wifi = params[:bar][:wifi]
     @bar.reservations = params[:bar][:reservations]
     @bar.happyhour = params[:bar][:happyhour]
-    # def create
-    #   @bar = current_user.reviews.new
-      if @bar.save
-        redirect_to bars_path
-      else
-        redirect_to new_bar_path
-      
-    end
+    if @bar.save
+      redirect_to bars_path
+    else
+      redirect_to new_bar_path
     
+    end
+  end
    
 
-    def edit
-    end
+  def edit
+  end
 
-    def update
-    end
+  def update
+  end
 
-    def destroy
-    end
-    
+  def destroy
   end
 end

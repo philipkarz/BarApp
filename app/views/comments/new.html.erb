@@ -1,0 +1,6 @@
+<h1>Comments#new</h1>
+<%= form_for [@review, @comment] do |f|%>
+<%=f.text_area :body, placeholder: 'Comment'%><br />
+
+<%= f.submit %><br />
+<% end %>
