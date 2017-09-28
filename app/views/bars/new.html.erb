@@ -1,21 +1,20 @@
 
 <h1>Add A Bar</h1>
-
+<ul class="list-group">
 <%= form_for @new_bar do |b| %>
-    <%= b.text_field :name, placeholder: 'Name', class: 'form-control' %> <br />
-    <%= b.text_field :address, placeholder: 'Address' %> <br />
-    <%= b.text_field :number, placeholder: 'Number' %> <br />
-    <%= b.text_field :hours, placeholder: 'Hours' %> <br />
-    <%= b.text_field :photos, placeholder: 'Photos' %> <br />
-    <%= b.text_field :website, placeholder: 'Website' %> <br />
-    <%# b.text_field :wifi, placeholder: 'Wifi?' %>
-    Wifi? <%= b.check_box :wifi %> <br />
-    <%# b.text_field :games, placeholder: 'Games?' %> 
-    Games? <%= b.check_box :games %> <br />
-    <%= b.text_field :happyhour, placeholder: 'Happyhour' %> <br />
-    <%# b.text_field :reservations, placeholder: 'Reservations?' %>
-    Reservations? <%= b.check_box :reservations %> <br />    
-    <%= b.submit 'Create Bar', class: 'btn btn-primary' %>
+    <%= b.text_field :name, placeholder: 'Name', class: "list-group-item" %> 
+    <%= b.text_field :address, placeholder: 'Address', class: "list-group-item"  %> 
+    <%= b.text_field :number, placeholder: 'Number', class: "list-group-item"  %> 
+    <%= b.text_field :hours, placeholder: 'Hours', class: "list-group-item"  %> 
+    <%= b.text_field :photos, placeholder: 'Photos', class: "list-group-item"  %> 
+    <%= b.text_field :website, placeholder: 'Website', class: "list-group-item"  %> 
+    <%= b.text_field :happyhour, placeholder: 'Happyhour', class: "list-group-item"  %>
+    Wifi? <%= b.check_box :wifi, class: "list-group-item"  %> 
+    Reservations? <%= b.check_box :reservations, class: "list-group-item"  %>
+    Games? <%= b.check_box :games, class: "list-group-item"  %> 
+    
+     <%= b.submit 'Create Bar', class: 'btn btn-primary' %>
 <% end %>
+</ul>
 
 

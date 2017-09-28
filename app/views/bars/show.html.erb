@@ -1,11 +1,16 @@
-<h1>Bars</h1>
+<div class="container-fluid">
+<div class="media">
+        <img class="d-flex align-self-start mr-3" src="" alt="">
+        <div class="media-body">
+          <h1 class="mt-0"><%= @bar.name %></h1>
+        
+        </div>
+      </div>
 
 <%= link_to  "Create Review", new_review_path %><br />
 <%= link_to  "Bars near you", bars_path %><br />
 <%= link_to  "Add to your favorites", add_favorite_path, method: 'post' %><br />
 
-
-<h1><%= @bar.name %></h1>
 <h2><%= @bar.address %></h2>
 <h2><%= @bar.number %></h2>
 <h3>Hours: <%= @bar.hours %></h3>
@@ -15,7 +20,9 @@
 <p>Wifi: <%= @bar.wifi %></p>
 <p>Reservations: <%= @bar.reservations %></p>
 <p>Games: <%= @bar.games %></p>
+</div>
 
+<div class="container-fluid">
 <h2> Customer Reviews </h2>
 <% @reviews.each do |r| %>
     
@@ -27,6 +34,7 @@
         <p><%= c.body %></p>
     <% end %>
 <% end %>
+</div>
 
 
 

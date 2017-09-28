@@ -1,10 +1,14 @@
 <h1>Bars</h1>
 <ul>
 <% @bars.each do |b| %>
-<li><%= link_to b.name, bar_path(b) %></li>  
+<div class="media">
+<img class="d-flex align-self-start mr-3" src="" alt="">
+<div class="media-body">
+<h5 class="mt-0"><%= link_to b.name, bar_path(b) %></h5>  
+    </div>
+</div>
 <% end %>
 <br />
-<%= link_to  "Create Bar", new_bar_path %>
+<%= link_to  "Create Bar", new_bar_path, class: 'btn btn-primary' %>
 </ul>
-
 

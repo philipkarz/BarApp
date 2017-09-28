@@ -3,13 +3,16 @@
 <h3><%= @review.user.name %></h3>
 
 <%= link_to "Add Comment", new_review_comment_path(@review) %>
-<%= link_to "Edit Review", edit_review_path(@review) %>
+<%= link_to "Edit", edit_review_path(@review) %>
+<%= link_to "Delete", review_path(@review), method: :delete, class: 'btn btn-primary' %>
 <ul>
    
     <% @review.comments.each do |c| %>
         <li>
             <%= c.body %>
             by: <%= c.user.name %>
+            Posted at: <%= Time.at %>
+             
             <%= link_to 'Edit', edit_review_comment_path(@review, c.id), class: 'btn-btn-primary' %>
         </li>
 

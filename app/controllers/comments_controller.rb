@@ -24,13 +24,19 @@ class CommentsController < ApplicationController
   end
 
   def edit
-    @review_comment = Comment.find(params[:id])
+    @comment = Comment.find(params[:id])
+    @review = Review.find(params[:review_id])
+
   end
 
   def update
   @comment = Comment.find(params[:id])
   @comment.update(comment_params)
+  @review = Review.find(params[:review_id])
+  if @comment.save 
+    redirect_to review_path(@review)
   end
+end
 
   def destroy
     @comment = Comment.find(params[:id])
