@@ -1,2 +1,10 @@
-<h1>Comments#edit</h1>
-<p>Find me in app/views/comments/edit.html.erb</p>
+<h1>Edit Comment</h1>
+<%= form_for [@review, @comment], :html => {class: 'edit_review_comment form-horizontal'} do |f| %>
+<div class="row"><legend class="col-md-4 col-md-offset-4">Edit Comment:</legend></div>
+<fieldset>
+<div class="form-group">
+        <%= f.label :body, 'Comment*', class: '', placeholder: "Comment" %>
+        <%= f.text_field :body, class: 'form-control' %>
+    </div>
+</fieldset>
+<% end %>

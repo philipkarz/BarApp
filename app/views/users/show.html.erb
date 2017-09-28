@@ -1,11 +1,18 @@
-<h1>Users# <%= @user.name %></h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<h1>Welcome <%= @user.name %>!</h1>
 
-<h1>check out these bars</h1>
-<h1>Bars</h1>
+<h3><%= link_to 'Check out some bars in your area!', bars_path %></h3>
+<br />
+<br />
+
+
+<h1>Your Favorites</h1>
+
 <ul>
-<% @bars.each do |b| %>
-<li><%= link_to b.name, bar_path(b) %></li>  
-<% end %>
-<%= link_to  "Create Bar", new_bar_path %>
+    <% @user.favorites.each do |f| %>
+        <li>
+            <%= f.bar.name %>
+           <%= link_to 'Delete', "/favorites/#{f.id}",  method: :delete, class: 'btn btn-primary' %>
+        </li>
+    <% end %>
 </ul>
+

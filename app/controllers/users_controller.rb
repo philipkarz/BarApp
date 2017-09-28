@@ -26,10 +26,21 @@ class UsersController < ApplicationController
   end
 
  def edit
+  if current_user.id == params[:id].to_i
+    @user = User.find(params[:id])
+  else
+    redirect_to user_path(current_user)
   end
+end
 
  def update
+  @user = User.find(params[:id])
+  if @user.update_attributes(user_params)
+    redirect_to user_path(current_user)
+  else
+    redirect_to edit_user_path(params[:id])
   end
+end
 
  def destroy
   current_user.destroy

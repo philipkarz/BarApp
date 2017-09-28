@@ -36,11 +36,28 @@ class BarsController < ApplicationController
    
 
   def edit
+    @bar = Bar.find(params[:id])
   end
 
   def update
+    @bar = Bar.find(params[:id])
+    @bar = Bar.update(bar_params)
+    redirect_to bar_path(@bar)
   end
 
   def destroy
+    @bar = Bar.find(params[:id])
+    @bar.destroy
+    redirect_to bars_path
+  end
+
+  def search
+    @bars = Bar.where("name ILIKE :query", { query: "%#{params[:query]}%"})
+  end
+  
+  private
+  def bar_params 
+    params.require(:bar).permit(:name, :user_id, :review_id, :hours, :address, 
+    :number, :photos, :website, :games, :wifi, :reservations, :happyhour)
   end
 end
