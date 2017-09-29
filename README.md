@@ -38,4 +38,4 @@ Welcome to Barhop. This revolutionary application allows its user to find the be
 
 #Shoutouts
 - Heres a list of people I constantly annoyed this week
-I would like to thank Charles, Chakrit, Kevin (helped me out with the search function), Phillipe, and last but not least Nate who basically teaches coding how Yoda would. Thanks for all the help, and get ready to do this all over again 3 weeks from now.
+I would like to thank Charles, Chakrit, Kevin (helped me out with the search function), Harold, Phillipe, and last but not least Nate who basically teaches coding how Yoda would. Thanks for all the help everyone, and get ready to do this all over again 3 weeks from now.
