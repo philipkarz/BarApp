@@ -43,7 +43,9 @@
             <p><%= r.body %></p>
             <p><%= r.rating %> stars &bigstar; &bigstar; &bigstar; &bigstar;  &star; </p>
             <p>by: <%= r.user.name %></p>
-        
+            <br />
+            <%= link_to "Comment or Edit", review_path(r.id) %>
+            <br />
             <div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       Comments
@@ -54,8 +56,7 @@
                         <% end %>
                     </div>
                   </div>
-                  <br />
-                  <%= link_to "Comment or Edit", review_path(r.id) %>
+                  
         <% end %>
         
     </div>
