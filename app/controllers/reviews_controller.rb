@@ -20,7 +20,8 @@ class ReviewsController < ApplicationController
     @review.user = User.find session[:user_id]
     @review.bar = Bar.find(session[:bar_id])
     if @review.save
-        redirect_to bars_path
+      flash[:success] = "Thanks for your feedback!"
+        redirect_to bar_path(@review.bar)
     else
         render :new
     end
@@ -33,6 +34,7 @@ class ReviewsController < ApplicationController
 
   def update
     @review = Review.update(review_params)
+    flash[:success] = "Review Updated"
     redirect_to review_path(@review)
 
   end
@@ -40,7 +42,9 @@ class ReviewsController < ApplicationController
   def destroy
     @review = Review.find(params[:id])
     @review.destroy
-    redirect_to bars_path
+    @bar = @review.bar
+    flash[:warning] = "Review Deleted"
+    redirect_to bar_path(@bar)
   end
 
   private

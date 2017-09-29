@@ -1,18 +1,27 @@
-<h1>Welcome <%= @user.name %>!</h1>
-
-<h3><%= link_to 'Check out some bars in your area!', bars_path %></h3>
-<br />
-<br />
-
-
+<div class="usershowbg">
+<div class="row">
+<div class="col-md-6">
+<div class="jumbotron">
+        <h1 class="display-3">Welcome <%= @user.name %>!</h1>
+        <p class="lead">
+        <hr class="my-4">
+        <p>Explore BarHop</p>
+        <p class="lead">
+        <h3><%= link_to 'Check out some bars in your area!', bars_path %></h3> 
+        </p>
+      </div>
+</div>
+<div class="col-md-6">
 <h1>Your Favorites</h1>
-
 <ul>
     <% @user.favorites.each do |f| %>
         <li>
-            <%= f.bar.name %>
-           <%= link_to 'Delete', "/favorites/#{f.id}",  method: :delete, class: 'btn btn-primary' %>
+            <h3><%= f.bar.name %></h3>
+           <%= link_to 'Delete', "/favorites/#{f.id}",  method: :delete, class: 'btn btn-danger' %>
         </li>
     <% end %>
 </ul>
+</div>
+</div>
+</div>
 

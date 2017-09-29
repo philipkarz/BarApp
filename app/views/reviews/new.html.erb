@@ -1,11 +1,17 @@
-<h1>Reviews#new</h1>
-<%= form_for @review do |f|%>
-<%=f.text_field :title, placeholder: 'Topic'%><br />
-<%=f.text_area :body, placeholder: 'Review'%><br />
-<%=f.number_field :rating, placeholder: 'Rating'%><br />
+<h1>Review Us</h1>
+<div class='jumbotron'>    
+        <%= form_for @review do |f|%>
+        <%=f.text_field :title, class: "form-control", placeholder: 'Topic'%>
+        
+        <%=f.text_area :body, class: "form-control", placeholder: 'Review'%>
+        
+        <%=f.number_field :rating, placeholder: 'Rating'%>  
+        
 
-<%= f.submit %><br />
-<% end %>
 
+        <%= f.submit 'Submit', class: 'btn btn-success' %>
+    <% end %>
+    
+</div>
 
 

@@ -1,12 +1,12 @@
-<h1>Bars#edit</h1>
-<p>Find me in app/views/bars/edit.html.erb</p>
+<div class='jumbotron'>
+<h1>Update bar info</h1>
 
 <%= form_for @bar do |b| %>
 <%= b.text_field :name, placeholder: 'Name' %> <br />
 <%= b.text_field :address, placeholder: 'Address' %> <br />
 <%= b.text_field :number, placeholder: 'Number' %> <br />
 <%= b.text_field :hours, placeholder: 'Hours' %> <br />
-<%= b.text_field :photos, placeholder: 'Photos' %> <br />
+<%= b.text_field :photo, placeholder: 'Photo' %> <br />
 <%= b.text_field :website, placeholder: 'Website' %> <br />
 
 Wifi? <%= b.check_box :wifi %> <br />
@@ -17,3 +17,4 @@ Games? <%= b.check_box :games %> <br />
 Reservations? <%= b.check_box :reservations %> <br />    
 <%= b.submit 'Update Bar', class: 'btn btn-primary' %>
 <% end %>
+</div>

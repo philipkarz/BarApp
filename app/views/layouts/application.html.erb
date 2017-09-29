@@ -6,9 +6,20 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Germania+One" rel="stylesheet">
   </head>
 
-  <body>
+  <% if params[:controller] == 'bars' and params[:action] == 'show' %>
+    <% body_class = "barshowbg" %>
+  <% elsif params[:controller] == 'users' and params[:action] == 'show' %>
+    <% body_class = "usershowbg" %>
+    <% elsif params[:controller] == 'bars' and params[:action] == 'new' %>
+    <% body_class = "newbarbg" %>
+  <% else %>
+    <% body_class = "barshowbg" %>
+  <% end %>
+
+  <body class="<%= body_class %>">
    <%= render 'layouts/partials/navbar' %>
 <!-- message that alert if email and password dont match -->
     <%= render 'layouts/partials/flash' %>

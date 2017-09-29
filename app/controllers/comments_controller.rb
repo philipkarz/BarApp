@@ -3,6 +3,7 @@ class CommentsController < ApplicationController
   end
 
   def show
+    @comment = Comment.find(params[:id])
   end
 
   def new
@@ -34,14 +35,16 @@ class CommentsController < ApplicationController
   @comment.update(comment_params)
   @review = Review.find(params[:review_id])
   if @comment.save 
+    flash[:success] = "Comment Updated"
     redirect_to review_path(@review)
   end
 end
 
   def destroy
     @comment = Comment.find(params[:id])
-    @review = Review.find(params[:review_id])
-    @review.comment.destroy
+    @review = @comment.review
+    @comment.destroy
+    flash[:danger] = "Comment Deleted"
     redirect_to review_path(@review)
   end
 

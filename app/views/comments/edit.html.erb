@@ -1,11 +1,15 @@
-<h1>Edit Comment</h1>
+<div class='jumbotron'>
 <%= form_for [@review, @comment], :html => {class: 'edit_comment form-horizontal'} do |f| %>
 <div class="row"><legend class="col-md-4 col-md-offset-4">Edit Comment:</legend></div>
 <fieldset>
 <div class="form-group">
         <%= f.label :body, 'Comment*', class: '', placeholder: "Comment" %>
         <%= f.text_area :body, class: 'form-control' %>
-        <%= f.submit  %>
+        <%= f.submit %>
+        <%= link_to 'Delete', review_comment_path(@comment), method: :delete, class: 'btn btn-primary' %>
+        <% end %>
+        
     </div>
 </fieldset>
-<% end %>
+</div>
+

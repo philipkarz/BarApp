@@ -20,7 +20,7 @@ class BarsController < ApplicationController
     @bar.address = params[:bar][:address]
     @bar.number = params[:bar][:number]
     @bar.hours = params[:bar][:hours]
-    @bar.photos = params[:bar][:photos]
+    @bar.photo = params[:bar][:photo]
     @bar.website = params[:bar][:website]
     @bar.games = params[:bar][:games]
     @bar.wifi = params[:bar][:wifi]
@@ -41,13 +41,16 @@ class BarsController < ApplicationController
 
   def update
     @bar = Bar.find(params[:id])
-    @bar = Bar.update(bar_params)
-    redirect_to bar_path(@bar)
+    @bar.update(bar_params)
+      flash[:success] = "Bar Updated"
+      redirect_to bar_path(@bar)
   end
+    
 
   def destroy
     @bar = Bar.find(params[:id])
     @bar.destroy
+    flash[:warning] = "Bar Removed"
     redirect_to bars_path
   end
 
@@ -58,6 +61,6 @@ class BarsController < ApplicationController
   private
   def bar_params 
     params.require(:bar).permit(:name, :user_id, :review_id, :hours, :address, 
-    :number, :photos, :website, :games, :wifi, :reservations, :happyhour)
+    :number, :photo, :website, :games, :wifi, :reservations, :happyhour)
   end
 end

@@ -1,9 +1,10 @@
+<div class='jumbotron'>
 <h1><%= @review.title %></h1>
 <h2><%= @review.body %></h2>
 <h3><%= @review.user.name %></h3>
 
-<%= link_to "Add Comment", new_review_comment_path(@review) %>
-<%= link_to "Edit", edit_review_path(@review) %>
+<%= link_to "Add Comment", new_review_comment_path(@review), class: 'btn btn-success' %>
+<%= link_to "Edit", edit_review_path(@review), class: 'btn btn-warning' %>
 <%= link_to "Delete", review_path(@review), method: :delete, class: 'btn btn-primary' %>
 <ul>
    
@@ -11,10 +12,11 @@
         <li>
             <%= c.body %>
             by: <%= c.user.name %>
-            Posted at: <%= Time.at %>
              
-            <%= link_to 'Edit', edit_review_comment_path(@review, c.id), class: 'btn-btn-primary' %>
+            <%= link_to 'Edit', edit_review_comment_path(@review, c.id), class: 'btn btn-primary' %>
+            
         </li>
 
     <% end %>
 </ul>
+</div>

@@ -2,13 +2,15 @@
 <ul>
 <% @bars.each do |b| %>
 <div class="media">
-<img class="d-flex align-self-start mr-3" src="" alt="">
+<%= link_to bar_path(b) do %>
+    <%= image_tag b.photo, class: "d-flex align-self-start mr-3 bar-list-thumb" %>
+<% end %>
 <div class="media-body">
 <h5 class="mt-0"><%= link_to b.name, bar_path(b) %></h5>  
     </div>
 </div>
 <% end %>
 <br />
-<%= link_to  "Create Bar", new_bar_path, class: 'btn btn-primary' %>
+<%= link_to  "Found a new spot? Tell us about it", new_bar_path, class: 'btn btn-primary' %>
 </ul>
 

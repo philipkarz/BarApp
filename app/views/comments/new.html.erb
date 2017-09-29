@@ -1,6 +1,16 @@
-<h1>Comments#new</h1>
-<%= form_for [@review, @comment] do |f|%>
-<%=f.text_area :body, placeholder: 'Comment'%><br />
+<h1>New Comments</h1>
+<div class='jumbotron'>
+<div class="form-group">
+    <label for="exampleFormControlTextarea1">Write a comment</label>
+    <%= form_for [@review, @comment] do |f|%>
+        <%=f.text_area :body, placeholder: 'Comment', class: "form-control"%><br />
+        <%= f.submit %><br />
+    <% end %>
+</div>
+</div>
 
-<%= f.submit %><br />
-<% end %>
+
+        
+        
+          
+        

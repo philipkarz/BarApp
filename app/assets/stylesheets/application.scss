@@ -1,6 +1,46 @@
 @import 'bootstrap';
 
-body {
-    background: red;
+.icon-float {
+    float: left;
 }
 
+.bar-list-thumb {
+    max-width: 120px;
+}
+
+body {
+    font-family: 'Germania One', cursive;
+}
+
+img {
+    border-radius: 20px;
+    max-width: 100%;
+}
+
+.newbarbg {
+    font-family: 'Germania One', cursive;
+    background-image: url('http://esq.h-cdn.co/assets/15/24/980x490/landscape-1434056356-landscape-beer-youll-never-drink.jpg');
+    background-size: cover;
+    color: dodgerblue;
+    }
+
+
+
+.barshowbg {
+    font-family: 'Germania One', cursive;
+    color: black;
+    background-size: cover;
+    background-image: url('http://flightdeckbar.com/wp-content/uploads/2016/05/csc-beer-fine.jpg')
+}
+
+.usershowbg {
+    color: orange;
+    font-family: 'Germania One', cursive;
+    background-size: cover;
+    background-image: url('https://metrouk2.files.wordpress.com/2017/07/pri_45375579.jpg?quality=80&strip=all&strip=all')
+}
+
+.comment {
+    border: 2px solid blue;
+    
+}

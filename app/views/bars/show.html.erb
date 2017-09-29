@@ -1,40 +1,64 @@
-<div class="container-fluid">
-<div class="media">
-        <img class="d-flex align-self-start mr-3" src="" alt="">
-        <div class="media-body">
-          <h1 class="mt-0"><%= @bar.name %></h1>
-        
+
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="media">
+            <img class="d-flex align-self-start mr-3" src="" alt="">
+            <div class="media-body">
+            <h1 class="mt-0"><%= @bar.name %></h1>
+            
+            </div>
         </div>
-      </div>
 
-<%= link_to  "Create Review", new_review_path %><br />
-<%= link_to  "Bars near you", bars_path %><br />
-<%= link_to  "Add to your favorites", add_favorite_path, method: 'post' %><br />
+        <%= image_tag @bar.photo %>
+        <br />
 
-<h2><%= @bar.address %></h2>
-<h2><%= @bar.number %></h2>
-<h3>Hours: <%= @bar.hours %></h3>
-<p><%= @bar.happyhour %></p>
-<h2><%= @bar.photos %></h2>
-<p><%= @bar.website %></p>
-<p>Wifi: <%= @bar.wifi %></p>
-<p>Reservations: <%= @bar.reservations %></p>
-<p>Games: <%= @bar.games %></p>
-</div>
-
-<div class="container-fluid">
-<h2> Customer Reviews </h2>
-<% @reviews.each do |r| %>
     
-    <h3><%= r.title %></h3>
-    <p><%= r.body %></p>
-    <p><%= r.user.name %></p>
-    <p><%= link_to "Comment", review_path(r.id) %></p> 
-    <% r.comments.each do |c| %>
-        <p><%= c.body %></p>
-    <% end %>
-<% end %>
+
+        <br />
+
+        <h3><%= @bar.number %></h3>
+        <h3>Hours: <%= @bar.hours %></h3>
+        <p><%= @bar.happyhour %></p>
+        <p><%= @bar.website %></p>
+        <p>Wifi: <%= @bar.wifi %></p>
+        <p>Reservations: <%= @bar.reservations %></p>
+        <p>Games: <%= @bar.games %></p>
+        <h2><%= @bar.address %></h2>
+
+        <%= link_to  "Remove Bar", bar_path(@bar), method: :delete, class: "btn btn-primary" %><br />
+    </div>
+    <div class="col-md-6">
+            <%= link_to  "Edit Bar", edit_bar_path(@bar), class: "btn btn-primary" %><br />
+            <%= link_to  "Create Review", new_review_path, class: "btn btn-success" %><br />
+            <%= link_to  "Bars near you", bars_path, class: "btn btn-dark" %><br />
+            <%= link_to  "Add to your favorites", add_favorite_path, method: 'post', class: "btn btn-danger" %><br />
+        
+        
+        <h2> Customer Reviews </h2>
+        <div class='jumbotron'>
+        <% @reviews.each do |r| %>
+            <h3><%= r.title %></h3>
+            <p><%= r.body %></p>
+            <p><%= r.user.name %></p>
+        
+            <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Comments
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <% r.comments.each do |c| %>
+                            <p class="dropdown-item"><%= link_to c.body, review_comment_path(r,c) %></p>
+                        <% end %>
+                    </div>
+                  </div>
+                  <%= link_to "Comment or Edit", review_path(r.id) %>
+        <% end %>
+        
+    </div>
 </div>
+</div>
+
 
 
 
