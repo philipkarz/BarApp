@@ -1,11 +1,16 @@
 
-<h1>Your only a step away from getting wasted!</h1>
+<h1>Your only a step away from getting wasted</h1>
 
 <%= form_for @user do |f| %>
 <div class="form-group">
-  <%= f.label :name, 'Name*' %>
+  <%= f.label :name, 'Full Name*' %>
   <%= f.text_field :name, class: 'form-control' %>
 </div>
+
+<div class="form-group">
+    <%= f.label :username, 'Username*' %>
+    <%= f.text_field :username, class: 'form-control' %>
+  </div>
 
   <div class="form-group">
       <%= f.label :email, 'Email*' %>

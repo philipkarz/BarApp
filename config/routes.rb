@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
 
-root 'bars#index'
+root 'users#new'
 resources :users
 resources :bars 
 # resources :reviews

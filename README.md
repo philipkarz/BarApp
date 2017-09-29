@@ -1,12 +1,15 @@
 # BarHop
 Welcome to Barhop. This revolutionary application allows its user to find the best place to get white girl wasted after an extremely stressful project. Click on "Sign Up" at the top left hand side to create an account. Once the user is logged in, they can click on a link directing them to all the local bars. The user can either select a specific bar or create a new one. They can then navigate to a specific bar by clicking on its title. They then have an option of adding a bar to thier favorites, reviewing it or updating a bars info. Users can add comments to eachothers reviews, as well as edit and delete thier own reviews or comments.
 
+![](Users/nickkarz/Desktop/Screen Shot 2017-09-28 at 9.15.44 PM.png "Pic")
+
 #MVP
 - Create the User, Bar, Favorites, Comments and Reviews models
 - Users can create, comment, edit or review a bar
 - Implement routes 
 - Users can sign up, login, logout or delete thier account
 - Users can add a bar to thier favorites
+
 
 #Development and Technologies
 
@@ -19,13 +22,15 @@ Welcome to Barhop. This revolutionary application allows its user to find the be
 - Bootstrap 
 - Ruby on Rails 
 
-## User Stories
+
+# User Stories
 - As a user I want a simple logging in process and easy to use interface.
 - As a user I want to be be able to see and create reviews for bars I have visited.
 - As a user I would like to comment on other users reviews and tell them if theyre full of shit
 - As a user I want to be able to add a Bar to my favorites list
 - As a user I would like to be able to create edit and delete an account, a review or a comment
 - As a user I want to get drunk as soon as possible with little effort
+
 
 #Future Features
 - Implement paper clip so users can upload profile photos

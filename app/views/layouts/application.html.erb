@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>AuthRails</title>
+    <title>BarHop</title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -15,6 +15,10 @@
     <% body_class = "usershowbg" %>
     <% elsif params[:controller] == 'bars' and params[:action] == 'new' %>
     <% body_class = "newbarbg" %>
+    <% elsif params[:controller] == 'users' and params[:action] == 'new' %>
+    <% body_class = "usersnewbg" %>
+    <% elsif params[:controller] == 'bars' and params[:action] == 'index' %>
+    <% body_class = "barsindexbg" %>
   <% else %>
     <% body_class = "barshowbg" %>
   <% end %>

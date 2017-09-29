@@ -16,15 +16,16 @@
     
 
         <br />
-
+        
+        <h2><%= @bar.address %></h2>
         <h3><%= @bar.number %></h3>
         <h3>Hours: <%= @bar.hours %></h3>
-        <p><%= @bar.happyhour %></p>
+        <p>Happyhour <%= @bar.happyhour %></p>
         <p><%= @bar.website %></p>
-        <p>Wifi: <%= @bar.wifi %></p>
-        <p>Reservations: <%= @bar.reservations %></p>
-        <p>Games: <%= @bar.games %></p>
-        <h2><%= @bar.address %></h2>
+        <p>Wifi? <%= @bar.wifi %></p>
+        <p>Reservations? <%= @bar.reservations %></p>
+        <p>Games? <%= @bar.games %></p>
+        
 
         <%= link_to  "Remove Bar", bar_path(@bar), method: :delete, class: "btn btn-primary" %><br />
     </div>
@@ -40,7 +41,8 @@
         <% @reviews.each do |r| %>
             <h3><%= r.title %></h3>
             <p><%= r.body %></p>
-            <p><%= r.user.name %></p>
+            <p><%= r.rating %> stars </p>
+            <p>by: <%= r.user.name %></p>
         
             <div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -52,6 +54,7 @@
                         <% end %>
                     </div>
                   </div>
+                  <br />
                   <%= link_to "Comment or Edit", review_path(r.id) %>
         <% end %>
         

@@ -1,12 +1,12 @@
-<h1>Bars</h1>
+<h1>Local Bars</h1>
 <ul>
 <% @bars.each do |b| %>
 <div class="media">
 <%= link_to bar_path(b) do %>
-    <%= image_tag b.photo, class: "d-flex align-self-start mr-3 bar-list-thumb" %>
+    <%= image_tag b.photo, class: "d-flex align-self-start mr-3 bar-list-thumb", id: 'mainimg' %>
 <% end %>
 <div class="media-body">
-<h5 class="mt-0"><%= link_to b.name, bar_path(b) %></h5>  
+<h1 class="mt-0"><%= link_to b.name, bar_path(b) %></h1>  
     </div>
 </div>
 <% end %>

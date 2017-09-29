@@ -1,12 +1,12 @@
 <div class='newbarbg'>
-<h1>Add A Bar</h1>
+<h1>Discovered A New Bar?</h1>
 <ul class="list-group">
 <%= form_for @new_bar do |b| %>
     <%= b.text_field :name, placeholder: 'Name', class: "list-group-item" %> 
     <%= b.text_field :address, placeholder: 'Address', class: "list-group-item"  %> 
     <%= b.text_field :number, placeholder: 'Number', class: "list-group-item"  %> 
-    <%= b.text_field :hours, placeholder: 'Hours', class: "list-group-item"  %> 
-    <%= b.text_field :photo, placeholder: 'Submit a photo', class: "list-group-item"  %> 
+    <%= b.text_field :hours, placeholder: 'Hours', class: "list-group-item"  %> <br />
+    <%= b.text_field :photo, placeholder: 'Submit a photo', class: "list-group-item"  %> <br />
     <%= b.text_field :website, placeholder: 'Website', class: "list-group-item"  %> 
     <%= b.text_field :happyhour, placeholder: 'Happyhour', class: "list-group-item"  %>
     Wifi? <%= b.check_box :wifi, class: "list-group-item"  %> 
