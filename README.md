@@ -1,5 +1,5 @@
 # BarHop
-Welcome to Barhop. This revolutionary application allows its user to find the best place to get white girl wasted after an extremely stressful project. Click on "Sign Up" at the top left hand side to create an account. Once the user is logged in, they can click on the beer icon which directs them to all the local bars. The user can either select a specific bar or create a new one. They can then navigate to a specific bar by clicking on its title. They then have an option of adding a bar to thier favorites, reviewing it or updating a bars info. Users can add comments to eachothers reviews, as well as edit and delete thier own reviews or comments.
+Welcome to Barhop. This revolutionary application allows its user to find the best place to get white girl wasted after a stressful project week. Click on "Sign Up" at the top left hand side to create an account. Once the user is logged in, they can click on the beer icon which directs them to all the local bars. The user can either select a specific bar or create a new one. They can then navigate to a specific bar by clicking on its title. They then have an option of adding a bar to thier favorites, reviewing it or updating a bars info. Users can add comments to eachothers reviews, as well as edit and delete thier own reviews or comments.
 
 
 ![IMGUR](https://i.imgur.com/jGb6R3B.png "Barpic")
