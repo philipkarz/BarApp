@@ -6,7 +6,7 @@ Welcome to Barhop. This revolutionary application allows its user to find the be
 
 
 
-#Wireframe
+#ERD
 
 ![IMGUR](https://i.imgur.com/kW8WjtU.png "Pic")
 
