@@ -1,20 +1,27 @@
 # BarHop
 Welcome to Barhop. This revolutionary application allows its user to find the best place to get white girl wasted after an extremely stressful project. Click on "Sign Up" at the top left hand side to create an account. Once the user is logged in, they can click on the beer icon which directs them to all the local bars. The user can either select a specific bar or create a new one. They can then navigate to a specific bar by clicking on its title. They then have an option of adding a bar to thier favorites, reviewing it or updating a bars info. Users can add comments to eachothers reviews, as well as edit and delete thier own reviews or comments.
 
+
 ![IMGUR](https://i.imgur.com/jGb6R3B.png "Barpic")
+
 
 
 #Wireframe
 
 ![IMGUR](https://i.imgur.com/kW8WjtU.png "Pic")
 
+
+
 #MVP
 - Create 5 models. The User, Bar, Favorite, Comment and Review models
 - Users can create, comment, edit or review a bar
+- Created thenecessary controller actions for each model
 - Implement complete restful routes for comments and reviews model
 - Users can sign up, login, logout or delete thier account
 - Users can add a bar to thier favorites
 - Made it so that if a user or bar is deleted all models dependent on them are destroyed as well
+- Finished it up with some bootstrap/css
+
 
 
 #Development and Technologies

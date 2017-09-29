@@ -20,6 +20,10 @@
     <% body_class = "usersnewbg" %>
     <% elsif params[:controller] == 'bars' and params[:action] == 'index' %>
     <% body_class = "barsindexbg" %>
+    <% elsif params[:controller] == 'reviews' and params[:action] == 'show' %>
+    <% body_class = "reviewshow" %>
+    <% elsif params[:controller] == 'bars' and params[:action] == 'search' %>
+    <% body_class = "barsearch" %>
   <% else %>
     <% body_class = "barshowbg" %>
   <% end %>
