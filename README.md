@@ -4,7 +4,7 @@ Welcome to Barhop. This revolutionary application allows its user to find the be
 
 Check out BarHop https://barhopapp.herokuapp.com/
 
-IMGUR
+[Imgur](https://i.imgur.com/h0QXdXF.png)
 
 #ERD
 
@@ -38,6 +38,7 @@ As a user I want to be able to add a Bar to my favorites list
 As a user I would like to be able to create edit and delete an account, a review or a comment
 As a user I want to get drunk as soon as possible with minimal effort
 Users index showing all users and thier profile info
+
 #Future Features
 
 Implement paper clip so users and bars can upload profile photos
